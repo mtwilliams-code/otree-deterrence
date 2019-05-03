@@ -1,0 +1,57 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    War
+{% endblock %}
+
+{% block content %}
+
+    You currently have {{ nukes }} nuclear warheads.
+    If you choose to start a nuclear war, you will receive a payoff as a function of the relative numbers of nukes between you and your opponent. <br>
+
+    Some example payoffs are below:
+    <table>
+        <tr>
+            <th>Your Nukes (<i>x</i>)</th>
+            <th>Opponent's Nukes (<i>y</i>)</th>
+            <th>Your Payoff</th>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td>0</td>
+            <td>x*5 up to 100</td>
+        </tr>
+        <tr>
+            <td>c</td>
+            <td>c</td>
+            <td>-100</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>y</td>
+            <td>y * -10 up to -200</td>
+        </tr>
+        <tr>
+            <td>x>y</td>
+            <td>y<x</td>
+            <td>1 - y/x * 250 - 100</td>
+        </tr>
+        <tr>
+            <td>x<y</td>
+            <td>y>x</td>
+            <td>1 - x/y * -100 - 100</td>
+        </tr>
+    </table>
+
+    {% formfields %}
+
+    {% chat nickname=player.role %}
+    {% next_button %}
+
+{% endblock %}

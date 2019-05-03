@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Stockpile Adjustment
+{% endblock %}
+
+{% block content %}
+
+    You currently have {{ nukes }} nuclear warheads. <br>
+    {{ info }} <br>
+
+    You can choose to add to or remove up to 15 warheads from your nuclear stockpile, at a cost of 0.5 and 0.2 per warhead, respectively. <br>
+
+    Either way, you will pay a mantainance fee of 0.1 per nuclear warhead in your stockpile before your changes. <br>
+    
+    {% formfields %}
+
+    You can chat with the other player below:
+    {% chat nickname=player.role %}
+
+    {% next_button %}
+
+{% endblock %}

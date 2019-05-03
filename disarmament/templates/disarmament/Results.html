@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+
+    Nuclear war has occured.<br>
+    You have {{ result }} <br>
+    Your payoff was {{ yourCost }} and you had {{ yourNukes }} nuclear warheads<br>
+    Your opponent's payoff was {{ theirCost }} and they had {{ theirNukes }} nuclear warheads<br>
+
+{% endblock %}
+
+
