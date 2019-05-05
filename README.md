@@ -1,6 +1,6 @@
 # Deterrence
 
-This is a simple nuclear disarmament game created using the open source oTree python library. A live version of the game can be accessed on [Heroku](tree-game.herokuapp.com). 
+This is a simple nuclear disarmament game created using the open source oTree python library. A live version of the game can be accessed on [Heroku](http://tree-game.herokuapp.com). 
 
 The game consists of a series of rounds. In each round, both players in a group will choose to build or destroy from 0 to 15 nuclear warheads. 
 Then, each player will decide if they want to start nuclear war. If either player begins nuclear war, or both players reach 0 nuclear warheads, the game ends and final scores are calculated.
